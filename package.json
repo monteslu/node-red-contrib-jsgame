@@ -1,0 +1,11 @@
+{
+  "name": "node-red-contrib-jsgame",
+  "version": "1.0.0",
+  "description": "Custom JSGame input and output for Node-RED",
+  "dependencies": {},
+  "node-red": {
+    "nodes": {
+      "jsgame": "jsgame.js"
+    }
+  }
+}

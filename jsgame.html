@@ -1,0 +1,51 @@
+<script type="text/javascript">
+  console.log('jsgame nodes loaded ??????/');
+  RED.nodes.registerType('jsgame-in', {
+    category: 'common',
+    color: '#f7df1e',
+    defaults: {
+      name: { value: "" }
+    },
+    inputs: 0,
+    outputs: 1,
+    icon: "font-awesome/fa-gamepad",
+    label: function() {
+      return this.name || "JSGame Input Node";
+    }
+  });
+
+  RED.nodes.registerType('jsgame-out', {
+    category: 'common',
+    color: '#f7df1e',
+    defaults: {
+      name: { value: "" }
+    },
+    inputs: 1,
+    outputs: 0,
+    icon: "font-awesome/fa-television",
+    label: function() {
+      return this.name || "JSGame Output Node";
+    }
+  });
+</script>
+<script type="text/html" data-template-name="jsgame-in">
+  <div class="form-row">
+      <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+      <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+</script>
+
+<script type="text/html" data-help-name="jsgame-in">
+  <p>A simple node that converts the message payloads into all jsgame-in characters</p>
+</script>
+
+<script type="text/html" data-template-name="jsgame-out">
+  <div class="form-row">
+      <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+      <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+</script>
+
+<script type="text/html" data-help-name="jsgame-out">
+  <p>A simple node that converts the message payloads into all jsgame-out characters</p>
+</script>
