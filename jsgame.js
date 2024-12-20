@@ -6,8 +6,10 @@ module.exports = function(RED) {
 
     const handler = (data) => {
       if (data) {
-        data.topic = 'JSGameInput';
-        node.send(data);
+        node.send({
+          topic: 'JSGameInput',
+          payload: data,
+        });
       }
     };
 
